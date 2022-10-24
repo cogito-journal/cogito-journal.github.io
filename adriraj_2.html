@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: "Lato", sans-serif;
+}
+
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+</style>
+
+</head>
+
+<body>
+<div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"> X </a>
+        <a href="index.html">Home</a>
+  <a href="issues.html">Issues</a>
+  <a href="about.html">About Us</a>
+      </div>
+      
+      <div id="main">
+        <button class="openbtn" onclick="openNav()"> MENU</button>  
+        
+      </div>
+
+<script>
+    function openNav() {
+      document.getElementById("mySidebar").style.width = "250px";
+      document.getElementById("main").style.marginLeft = "250px";
+    }
+    
+    function closeNav() {
+      document.getElementById("mySidebar").style.width = "0";
+      document.getElementById("main").style.marginLeft= "0";
+    }
+    </script>
+
+<script type="text/javascript" async="" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+<div align="center">
+    <h1>An Epistemological Investigation of Geometry</h1>
+    <br>
+    <h3>Adriraj Talukdar</h3>
+    <br>
+    <br>
+        <div align="left"> 
+            <h2>The Straight Line</h2>
+        </div>
+        <p>What is a straight line in Euclid's Elements? Euclid described straight line as <q>breadthless length</q>
+            which <q>lies equally with respect to all the points on itself</q>. It is said to be straightest (nowhere
+            curved) path between two points. Its uniqueness is assumed in the postulate : Given two points there
+            exists a unique straight line joining them. Now it is easy to relate this description to our perception
+            of straight line. But in a formal sense, this does not qualify as a definition. Here the straight line, or
+            rather the notion of straightness is a primitive one. </p>
+            <p>
+                On the other hand, there is another approach forwarded by Descartes, Hilbert, Riemann and others -
+                the metric approach. In Euclid's system it is proved by the fundamental postulates and various
+                results such as triangle inequality that the straight line is the shortest path between two points in 2 or
+                3 dimensions. However, in metric approach, primitively straight line is defined to be the path
+                between two points which has shortest distance. Now, this distance is denoted by a metric function
+                which gives non-negative real values and follows triangle inequality. And in <span class="math display">ℝ<sup>2</sup></span> or <span class="math display">ℝ<sup>3</sup></span>
+                the chosen
+                metric is the Cartesian distance and it works fine with our general intuition of physical space. All
+                the results of Euclid's Elements in <span class="math display">ℝ<sup>2</sup></span> or <span class="math display">ℝ<sup>3</sup></span>
+                 hold perfectly by starting from metric too. So one might
+                argue that Euclid's geometric space is an immediate result of us being submerges in the physical
+                space which has all the same properties. Obviously in Newtonian mechanics space is isometric,
+                homogenous and Euclidean and that never worked against intuition. But today we know of
+                numerous geometries and discuss about larger classes of geometries among which Euclid is just a
+                special case. We can talk about geometries where parallel lines are not always equidistant or sum of
+                internal angles of a triangle is not twice a right angle. One might argue that we have developed
+                some analytic tools and now we can generalise the results of Euclid to larger classes of geometries
+                and can think of different approaches to form such geometries. But however, Euclid's geometry is
+                the natural one because it does not require any training in abstract logic or mathematics, even the
+                uninitiated child intuitively think that physical space is Euclidean.
+            </p>
+            <p>Now let us look at the Relativity Theory of Einstein. Einstein considers space-time to be nonEuclidean. Experiments have proven that in presence of heavy object light rays can bend. In general
+                relativity gravitational force is caused by curvatures in space-time which cause objects to move in
+                certain directions (along the curved path). By the principle of least action, the geodesics or shortest
+                path in its initial direction is followed by a travelling ray of light. The fact that it bends near heavy
+                objects indicate that the geodesics are not straight lines there, rather they are themselves curved. But
+                Einstein showed that space-time follows a hyperbolic geometry. However, space without the time
+                coordinate (or better to say space at a given time instance) is still Euclidean. But universe is
+                expanding and if we incorporate time only then the four dimensional space-time continuum is nonEuclidean.</p>
+            
+                <br>
+                <div align="left"> 
+                    <h2>The Problem of Primitive Notions</h2>
+                </div> 
+                <p>Now if we look at the approach in Elements, we agree to the description of straight line because we
+                    can associate with it our understanding of straight line from experience. However there is no
+                    definite affirmation in saying <q>the straightest path between to points</q>. Straightness implies there is
+                    no change in direction. It is true that change of direction can be understood by angles in 2D. But
+                    again angle is determined by two straight lines and direction lies just along a straight line. One can
+                    see the circularity of establishing primitive notions in pure analytic terms. The same is true when
+                    we understand straight line by shortest distance. We can measure distance only by using preferably
+                    a rigid body as a unit - distance is understood as nothing but length vis-a-vis the idea of line
+                    segment. In this sense, geometry initiates from synthetic knowledge. But we know that we can not 
+                    draw a straight line or circle or any of the nice figures in geometry up to infinite precision in real
+                    life. Then what do we really understand by straight line or circle if we can not exactly identify the
+                    object of geometry (say a straight line proper) and the object of perception (say the straight line
+                    drawn on paper with very small yet positive breadth)? Plato had an answer for this. Plato said that
+                    the idea of straightness or circleness (the property of being a circle) reside in our mind as pure idea
+                    and all the physical lines or circles are just realization of these ideas. Circles or straight lines are not
+                    in the physical space, there are only distortions or manifestations of the pure ideal. Plato's essential
+                    idea was that the Real is subject to knowledge (say, Euclidean Geometry) and it is only our
+                    empirical investigation (say, Visual Geometry) that leads to distortion from the Real.</p>
+
+                    <br>
+                    <div align="left"> 
+                        <h2>The Kantian Argument </h2>
+                    </div> 
+
+                    <p>
+                        German philosopher Immanuel Kant demonstrated a flaw in Plato’s scheme. Abstract reasoning
+                        must be independent of individual human understanding. Therefore we can not have a priori
+                        abstract knowledge about the Real which we can forward to further reasoning. It is only through
+                        passive observation of sensible world and active synthesis of the sensible data can knowledge
+                        initiate and only then we can understand the a priori form of our understanding by reflecting upon
+                        the process of the aforementioned synthesis. Kant said that the conception of space, however, is
+                        synthetic a priori. By means of externality we have the intuition about space – which is realised as
+                        the difference in place between objects external to us as opposed to their difference in their
+                        properties within themselves. Kant establishes the limit of human understanding to be the horizon
+                        of the possibilities of sensibility. So straight line or any geometric object, Kant says, is the
+                        idealisation of some observable objects synthesized through our intuition of space. So the Kantian
+                        take would be as following: Our intuition of space that is a priori within the form of understanding
+                        makes us see the physical reality in a Euclidean three dimensional space. Euclid reflects on the most
+                        fundamental intuition about geometric objects which he can do by associating our experience of the
+                        physical correspondents of those objects with their abstract form in pure geometry. This intuitive
+                        association is established by the aforementioned primitive notions. However, no claims can be made
+                        about the Truth of the pure physical space. 
+                    </p>
+
+                    <br>
+                    <div align="left"> 
+                        <h2>Real Is Rational And Rational Is Real</h2>
+                    </div> 
+
+                    <p>
+                        Plato and Kant both commits to one thing - that is the Real exists independent of us - static, perfect
+and complete; and we by our sensory and analytic apparatus try to understand it. Kant further says,
+it is impossible to know the Real as it is. Another German philosopher Georg Wilhelm Friedrich
+Hegel put a different question before us - what exactly is this Real? That the thing-in-itself beyond
+our sensible possibility is unknowable is a knowledge of the thing-in-itself itself. By this argument
+Hegel rejects the possibility of absolute unknowability. The Real is not the absolute state of things
+in themselves, rather it is the dynamicity of the things. Our experience encounters premises that are
+at the same time opposite but each exists only with respect to the other - they are each others'
+negation and affirmation. It is in our understanding that we synthesize them in order to resolve the
+contradiction and then move onto the next agenda. This is the scheme of the Real vis-a-vis the
+Rational - the scheme of Dialectics. So let us now try to apply this to questions regarding geometry
+and space. 
+                    </p>
+
+            <p>Take the straight line. Have you ever drawn a perfect straight line? Or have anyone ever perceived
+                perfect breadthless length? It is not possible (The finest microscope can not see breadthlessness).
+                Then how do we understand what Euclid meant by straight line without any hardship? One thing
+                that we obviously experience physically is the sense of direction (simply by the ability to point out
+                at something). So now if there are two objects and I start from one pointing towards the other I can 
+                walk along a path to reach the other object (Let us forget for this moment that I am walking on a
+                non-planar earth) while pointing to it constantly. It is a very concrete experience. Now since we can
+                talk about constant direction, we have to consider the possibility of changing direction as well. This
+                requires at least a (planar) surface where infinitely many directions are possible. These directions
+                are distinct insofar that they point away from each other, but they are also similar since property of
+                space itself is unaltered along any one of them. So the notion of the straightness is the negation of
+                possibilities of direction and at the same time affirmation of a particular direction. </p>
+
+                <p>So now we have the <q>straight</q> in <q>straight line</q>. But before that we have to figure out what is
+                    <q>line</q>. Euclid defined line as a breadthless length. So let us understand the notion of distance or
+                    length. And distance can be understood in terms of duration. Kant said that time is the a priori
+                    intuition of our internality -realised as the order or interval in which we perceive several events
+                    either among external objects or internal thought. Now if we start from one point and reach another,
+                    it will involve a time duration to travel the path. Now if we measure the distance along this path
+                    with a rigid body such as a ruler, both end points of that ruler is determined simultaneously. In this
+                    sense distance becomes both preservation of the information about the duration as well as its
+                    negation. And up to this the notion of length is clear to us. Now what do we understand by saying
+                    the length is breadthless? We said straightness is determination of one direction along all the points
+                    on the path. But for any line, straight or curved, breadthlessness indicated the determination of
+                    unique direction at a given point. That is, the direction allowed on point can be different from
+                    another point, but that one point must allow only one direction. And then we have breadthlessness.
+                    So once through determination of direction and then through determination of duration we reach at
+                    an object which is <q>a breadthless length that lies equally to all points on it</q> that is the Straight Line.
+                    When we say straight line extends infinitely in both direction we simply mean that if our space
+                    allows we can keep walking on a fixed direction forever, without stopping. It is also not hard to say
+                    that shortest path between two points is the path where it takes least time to travel that is along the
+                    path where we do not change the direction multiple times. So the metric intuition is equally sound
+                    in our scheme of determination of direction and duration. </p>
+
+                    <p>
+                        Interestingly if we are given two points quite far away, it is unlikely we can draw the (physical)
+                        straight line joining them in the first attempt. It is easier to find first the shortest path and then claim
+                        it is the straightest path. However intuitively we know about the straightest path first and then
+                        conclude it is shortest. Thus Euclid's approach was more intuitive and experiential. But Descartes's
+                        approach is much more sophisticated and precise since it builds itself on Euclidean synthetic
+                        intuition combined with analytic method of Algebra. Let us reserve the dialogue between Algebra
+                        and Geometry for another essay.
+                    </p>
+
+
+                    <br>
+                    <div align="left"> 
+                        <h2>Addendum</h2>
+                    </div> 
+
+                    <p>The Hegelian scheme equates reality not with the hidden truth behind appearance. There is no true
+                        reality deep beneath the surface. It's all on the surface. And all of it is in motion, the universe is
+                        becoming, insofar that it is Not absolute, static, permanent, perfect. Universe itself is imperfect
+                        similar to our cognition of it. This is quite visible in our development from Newtonian mechanics to
+                        theory of relativity. Newton considered the physical space to be independent of us - homogenous,
+                        static, absolute. And time is also absolute insofar that a given time interval is same for every object
+                        in the universe. Einstein showed that space and time is relativistic. But not only that. Let us imagine
+                        there is a point mass. Mass corresponds to inertia - that resists change in motion. Acceleration is
+                        change in motion and thus a negation to mass. So for this two concrete category to be synthesized
+                        Newton defined force as the external agent causing the change. Newton went farther to demonstrate                         that any object with mass exerts a gravitational force on other masses. However he could not
+                        elucidate what causes this gravitational force. Einstein surprisingly showed that it is space-time
+                        itself, or rather curvature in space-time caused by mass that causes gravitational force. But then
+                        what is mass - that what causes curvature in space-time. To simplify all these is as such: Newton
+                        had absolute Euclidean space and absolute time and also mass and gravitational force caused by
+                        mass. Einstein then sublated absolute space and time in non-Euclidean relativistic space-time and
+                        sublated mass and gravity in curvature of the same space-time. And thus we are here with a better
+                        developed, sophisticated model of the universe, with a better understanding of reality.</p>
+    </div>
+</body>
+
+</html>

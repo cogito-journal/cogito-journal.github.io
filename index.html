@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cogito</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: "Lato", sans-serif;
+}
+
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+</style>
+</head>
+<body>
+
+<div id="mySidebar" class="sidebar">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"> X </a>
+  <a href="index.html">Home</a>
+  <a href="issues.html">Issues</a>
+  <a href="about.html">About Us</a>
+</div>
+
+<div id="main">
+  <button class="openbtn" onclick="openNav()"> MENU</button>  
+  
+</div>
+
+<div align="center">
+    <h1>Cogito</h1>
+    <p>
+        In the good old days of really existing Philosophy, as something other than passive methodological
+        reflection, with its repertoire of competing totalities and ambitious representations, it was generally
+        held - <q>Metaphysics lets you talk about everything under the sun.</q>
+      </p>
+      <p>So many centuries later, it appears now that Science, once held within Philosophy, has emerged
+        independently as the dominant discourse. Questions once regarded as the pinnacle of metaphysical
+        thought - &quot;Does the universe have a boundary?&quot;, &quot;Is there such a thing as essential human nature?&quot; -
+        are variously taken up in respective sciences.
+      </p>
+        <p>
+            However, it is evident that scientific discourse is rendered impotent when confronted with certain
+    kinds of problems (consciousness, social antagonisms, aesthetics, semiology, to name a few in a
+    systematic lineage) - at the heart of which is the very question of Cartesian Subjectivity.
+    It is along these lines that we return to the disavowed modernist split, between Human &amp; Nature,
+    via an immanent critique of Science.
+        </p>
+    <p>
+        To what extent can the question of Subjectivity be conceived within the coordinates of (Natural)
+    Science?
+    What is meant by the qualifier - <q>Natural</q>? Will Science eventually mature as a <q>total discourse</q>?
+    </p>
+    <br> 
+    <p>
+        Ultimately, <q>Cogito</q> is an effort to initiate meaningful dialogue across disparate fields of study,
+    which in the diffuse environment of the day, tend to increasingly talk past each other, each with its
+    own tapestry of infuriating jargon, directed to investigate what is simultaneously most transparent
+    and nevertheless opaque to the human mind - itself.
+    </p>
+
+    <br>
+    <br>
+    <div align = "left">
+      <h2>Disclaimer</h2>
+      <p>
+        Responsibility for information put out belongs solely to the respective author(s),
+and by extension and organisational unity, '<b>Cogito</b>'.
+      </p>
+    </div>
+</div>
+
+<script>
+function openNav() {
+  document.getElementById("mySidebar").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+</script>
+   
+</body>
+</html> 

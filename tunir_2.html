@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: "Lato", sans-serif;
+}
+
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+
+
+.img-container {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+</style>
+
+</head>
+
+<body>
+<div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"> X </a>
+        <a href="index.html">Home</a>
+  <a href="issues.html">Issues</a>
+  <a href="about.html">About Us</a>
+      </div>
+      
+      <div id="main">
+        <button class="openbtn" onclick="openNav()"> MENU</button>  
+        
+      </div>
+
+<script>
+    function openNav() {
+      document.getElementById("mySidebar").style.width = "250px";
+      document.getElementById("main").style.marginLeft = "250px";
+    }
+    
+    function closeNav() {
+      document.getElementById("mySidebar").style.width = "0";
+      document.getElementById("main").style.marginLeft= "0";
+    }
+    </script>
+
+<script type="text/javascript" async="" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+<div align="center">
+    <h1>Teaching Logic to the Dumb : A look into decision trees</h1>
+    <br>
+    <h3>Tunir Ghosh</h3>
+    <br>
+    <br>
+    </div>
+
+    <div align="center"><h2>The History</h2></div>
+    <p>The idea of statistical inference starts years ago in the 1800’s with the establishment of the old regression methods. In this article we will study the decision tree classification to understand statistical decision making.</p>
+<br>
+    <div align="center">
+      <h2>The Decision Tree</h2>
+      <p>The decision tree conceptualized somewhere around 1963-1966 is a very simple yet interesting idea to study the flow of logic. Let’s take a look at an example:</p>
+    </div>
+    <br>
+<div align="center">
+<img src="https://raw.githubusercontent.com/prikarsartam/prikarsartam/main/tunir_image1.jpg" />
+</div>
+<p>As we can see, every node in this tree represents a question that further pinpoints certain properties leading upto a final answer that is desired. The best thing about the concept of decision tree is that it very accurately portrays the logical flow as in humans. In each step it splits the data to learn the unique properties of the dataset.</p>
+
+<br>
+
+<p>Now this puts forward a very important question, i.e., how do we split the data? Or in which order should the questions be asked to get a better subset. To determine this we need to understand the notions of purity of subsets and the criteria available to determine this.</p>
+<br>
+
+<p>In this case we have two different criteria to study purity <b>Gini index</b> and <b>Information entropy</b>.</p>
+<br><br>  
+<div align="center">
+  <h2>Information Entropy:</h2>
+</div>
+
+<p>Claude a Shannon one of the greats in the field of mathematics and computer science defined the term and the concept while he was working on information theory. He was working on computers so whatever will be discussed in this section would be in base 2. So Shannon while writing his paper on mathematical theory of communication defines a communication system as having 3 parts: a source, a communication channel and a receiver. Now the question was how well would the receiver be able to reconstruct the original data even after data loss in transmission. While discussing this we get the idea of Information Entropy which embodies the amount of surprise that is inherent to a random variables possible outcomes. For an example if we take a lottery, the information that a ticket does win is more important than the fact that some particular ticket doesn't. So this information content can be represented -log(p(E)) as probability of an event increases it loses it's surprise value/ becomes regular.</p>
+<br>
+<p>So we have the measurement of importance of information as [-log(p(E))]</p>
+<br>
+<p>This gives us the entropy as</p>
+<br>
+<img src="https://raw.githubusercontent.com/prikarsartam/prikarsartam/main/tunir_image4.png"/>
+<div align="center"></div>
+<h2>Gini Index</h2>
+<p>
+  Gini index or Gini impurity on the other hand gives us an idea about the purity of a classification, it gives us the probability of a feature being incorrectly classified on random selection.
+Thus the feature with the least Gini impurity has the best classification if selected.
+</p>
+</div>
+<br>
+<p>The impurity is calculated as: </p>
+<img src="https://raw.githubusercontent.com/prikarsartam/prikarsartam/main/tunir_image5.png"/>   
+<br>
+<p>Both these can be used to calculate the feature which should be selected first.</p>
+<br>
+<p>This method of statistically estimating the data is preferred and popular because it is explainable, does not require large data to be accurate and can even handle missing data or attribute values and further takes little time to train. However the main issue is that every single data points become important in this method of decision taking and the tree is rebuilt for every point added to the dataset. This means wrong decisions in the dataset can hugely affect the final learning. Also the trees grow very large for larger datasets and thus it becomes necessary that proper pruning is done to keep it efficient.</p>
+<br>
+<p>Despite the errors this method of teaching a machine to think stands out because of it’s efficiency and high explainability and its likeness to how humans intuitively process logic.</p>
+  </body>
+
+
+  <div class="clearfix">
+    <div class="img-container">
+    <img src="https://raw.githubusercontent.com/prikarsartam/prikarsartam/main/tunir_image2.jpg" alt="Italy" style="width:100%">
+    </div>
+    <div class="img-container">
+    <img src="https://raw.githubusercontent.com/prikarsartam/prikarsartam/main/tunir_image3.jpg" alt="Forest" style="width:100%">
+  </div> 
+<br>
+<br>
+<br>
+<div align="left">
+  <h3>Image Sources:</h3>
+  <ul>
+<li>  <a href="https://www.explorium.ai/blog/the-complete-guide-to-decision-trees/#:~:text=1963%3A%20The%20Department%20of%20Statistics,split%20data%20into%20two%20subsets."> Link</a> </li>
+
+<li>Machine Learning by Tom M. Mitchell</li>
+</ul>
+  
+
+</div>
+</html>
