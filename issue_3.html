@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>issues</title>
+    <title>1_Issue</title>
+
+    
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 
@@ -100,11 +102,25 @@ body {
   background-color: #008CBA;
   color: white;
 }
+
+.button3 {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #539dce;
+}
+
+.button3:hover {
+  background-color: #539dce;
+  color: white;
+}
+
+
 </style>
 
 </head>
 
 <body>
+
     <div id="mySidebar" class="sidebar">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"> X </a>
         <a href="index.html">Home</a>
@@ -117,30 +133,45 @@ body {
         
       </div>
 
-    <div align="center">
-        <h1>The corresponding Issues are listed underneath</h1>
+      <div align="center">
+        <h1>3rd Issue</h1>
     </div>
 
-    
+    <div align="center">
+        <br>
+        <br>
+        <button onclick="location.href='swagato_tunir_3.html'" class="button button1"><b>In defence of Metaphors</b> - Swagato Saha, Tunir Ghoshr</button>
+        <br>
+        <br>
+        <button onclick="location.href='pritam_3.html'" class="button button2"><b><span style='font-size:
+            12.0pt'>Nature of Logic  <img width=36 height=24
+            src="Nature%20of%20Logic%20=__=%20Logic%20of%20Nature_files/image001.png"> Logic
+            of Nature : <b>1</b></span></b> - Pritam Sarkar</button>
+        <br>
+        <br>
+        <button onclick="location.href='adriraj_swagato_3.html'" class="button button3"><b>Kant is to Gödel as Hegel is to Turing</b> - Adriraj Talukdar, Swagato Saha</button>
+        <br>
+        <br>
+        <button onclick="location.href='tunir_3.html'" class="button button2"><b>The Bayesian Scene</b> - Tunir Ghosh</button>
+        <br>
+        <br>
+        <button onclick="location.href='#'" class="button button2"><b>u . p . c . o . m . i . n . g</b> - Devdan Dey</button>
+        <br>
+        <br>
+    </div>
 
-<div align="center">
-    <button onclick="location.href='issue_1.html'" class="button button1">1st Issue</button>
-    <br>
-    <button onclick="location.href='issue_2.html'" class="button button2">2nd Issue</button>
-    <br>
-    <button onclick="location.href='issue_3.html'" class="button button2">3rd Issue</button>
-</div>
+    <script>
+        function openNav() {
+          document.getElementById("mySidebar").style.width = "250px";
+          document.getElementById("main").style.marginLeft = "250px";
+        }
+        
+        function closeNav() {
+          document.getElementById("mySidebar").style.width = "0";
+          document.getElementById("main").style.marginLeft= "0";
+        }
+        </script>
 
-<script>
-    function openNav() {
-      document.getElementById("mySidebar").style.width = "250px";
-      document.getElementById("main").style.marginLeft = "250px";
-    }
-    
-    function closeNav() {
-      document.getElementById("mySidebar").style.width = "0";
-      document.getElementById("main").style.marginLeft= "0";
-    }
-    </script>
 </body>
+
 </html>

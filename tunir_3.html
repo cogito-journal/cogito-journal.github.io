@@ -1,0 +1,372 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:10.0pt;
+	margin-left:0in;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+.MsoChpDefault
+	{font-family:"Calibri",sans-serif;}
+.MsoPapDefault
+	{margin-bottom:10.0pt;
+	line-height:115%;}
+ /* Page Definitions */
+ @page WordSection1
+	{size:595.3pt 841.9pt;
+	margin:56.7pt 42.5pt 56.7pt 85.05pt;}
+div.WordSection1
+	{page:WordSection1;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US link=blue vlink=purple style='word-wrap:break-word'>
+
+<div class=WordSection1>
+
+<p class=MsoNormal align="center"><span lang=EN-GB><br>
+</span><b><span lang=EN-GB style='font-size:16.0pt;line-height:115%;font-family:
+"Times New Roman",serif'>                              THE BAYESIAN SCENE</span></b><span
+lang=EN-GB style='font-size:16.0pt;line-height:115%;font-family:"Times New Roman",serif'><br>
+                                                                                     
+</span><span lang=EN-GB style='font-size:12.0pt;line-height:115%;font-family:
+"Times New Roman",serif'>- Tunir Ghosh</span><span lang=EN-GB><br>
+<br>
+<br>
+<br>
+<br>
+</span><span lang=EN-GB style='font-size:12.0pt;line-height:115%;font-family:
+"Times New Roman",serif'>The world that we see and perceive is very much built
+on probability. Each of our actions are somewhat dependent on our idea of
+perceptions and predictions which touches the intuitive aspect of probability.
+From simple guesses in an MCQ to the most advanced scientific experiments or
+computer algorithms, everything has a touch of probability swaying their fate.
+However, most of us bother very little to understand the motivations,
+formalisms and necessity of studying these fields. This article would be an attempt
+to cover the basics of probability the way it is taught nowadays and further
+delve into the idea of Bayesian update a method for tuning and refining our
+knowledge of the known world.</span></p>
+
+<p class=MsoNormal><b><u><span lang=EN-GB style='font-size:12.0pt;line-height:
+115%;font-family:"Times New Roman",serif'>The Basics</span></u></b></p>
+
+<p class=MsoNormal><span lang=EN-GB style='font-size:12.0pt;line-height:115%;
+font-family:"Times New Roman",serif'>So, let’s start with the oldest and
+simplest view of probability. We have a set of all possible outcomes
+(observable conclusions) of an experiment (a phenomena under observation). We
+call this set the <b><i>EVENT SPACE. </i></b>So, in this context we would
+define the probability or likelihood of an event, i.e., how likely is it to get
+a particular event as an outcome when the experiment is conducted.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB style='font-size:12.0pt;line-height:115%;
+font-family:"Times New Roman",serif'>Now that we have the qualitative
+description under our belt, we take a look at the qualitative factor, we should
+start to quantify the probability by relating it with some measurement.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB style='font-size:12.0pt;line-height:115%;
+font-family:"Times New Roman",serif'>This gives rise to the two schools of
+thoughts of probability, the frequentist and the Bayesian, we for the
+simplicity of consideration at this moment will consider the frequentist regime
+and slowly move into the Bayesian idea as our primary interest.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB style='font-size:12.0pt;line-height:115%;
+font-family:"Times New Roman",serif'>So, both the schools agree that the
+probability is a function P that relates an event from the event space and to a
+real number, in particular in the interval [0,1].</span></p>
+
+<p class=MsoNormal><span lang=EN-GB style='font-size:12.0pt;line-height:115%;
+font-family:"Times New Roman",serif'>The frequentists say that this function
+can be defined using the formula:</span></p>
+
+<p class=MsoNormal><span lang=EN-GB style='font-size:12.0pt;line-height:115%;
+font-family:"Times New Roman",serif'>P(E)</span><span
+lang=EN-GB style='font-size:11.0pt;line-height:115%;font-family:"Calibri",sans-serif;
+position:relative;top:10.0pt'><img width=43 height=33
+src="cogito-probability_files/image001.png"></span><span lang=EN-GB
+style='font-size:12.0pt;line-height:115%;font-family:"Times New Roman",serif'> </span></p>
+
+<p class=MsoNormal><span lang=EN-GB style='font-size:12.0pt;line-height:115%;
+font-family:"Times New Roman",serif'>Here N(...) denotes the no. of elements of
+times an element occurs. So it is a ratio of the no. of times the event occurs
+to the total frequency of all possible outcomes. The ratio as we can clearly
+see falls in the interval [0,1]. This acts as a pretty good estimator of how
+frequently an event has happened and thus by extension how likely it is to
+happen in a future reproduction of the experiment. </span></p>
+
+<p class=MsoNormal><span lang=EN-GB style='font-size:12.0pt;line-height:115%;
+font-family:"Times New Roman",serif'>Now the next notion that we would like to
+establish is of <b><i>Conditional Probability</i></b>, which bears the
+mathematical form,</span></p>
+
+<p class=MsoNormal><span lang=EN-GB style='font-size:12.0pt;line-height:115%;
+font-family:"Times New Roman",serif'>P(A|B)</span><span
+lang=EN-GB style='font-size:11.0pt;line-height:115%;font-family:"Calibri",sans-serif;
+position:relative;top:10.0pt'><img width=57 height=33
+src="cogito-probability_files/image002.png"></span></p>
+
+<p class=MsoNormal><span lang=EN-GB style='font-size:12.0pt;line-height:115%;
+font-family:"Times New Roman",serif'>Qualitatively this measures the likeliness
+of event A occurring given that event B has occurred. So this assumes that
+overall the event B has occurred so now the event space shifts to B and the
+likeliness of A occurring after that would only be if the elements that A and B
+shared appeared as the outcome. </span></p>
+
+<p class=MsoNormal><span lang=EN-GB style='font-size:12.0pt;line-height:115%;
+font-family:"Times New Roman",serif'>This is of interest as it shifts the
+context of probability from an absolute value standpoint and gives a way to
+associate the occurrence of an event A with other events, and in case the
+occurrence event A truly does depend on the other events we will get a
+substantial value for this conditional probability. Thus conditional
+probability helps us inspect a correlation between different events.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB style='font-size:12.0pt;line-height:115%;
+font-family:"Times New Roman",serif'>This propels us to study another concept, <b><i>Total
+Probability</i></b>. </span></p>
+
+<p class=MsoNormal><span lang=EN-GB style='font-size:12.0pt;line-height:115%;
+font-family:"Times New Roman",serif'>Here we are again trying to check the probability
+of an event occurring by looking at its conditional probabilities. By formula:</span></p>
+
+<p class=MsoNormal><span lang=EN-GB style='font-size:12.0pt;line-height:115%;
+font-family:"Times New Roman",serif'>P(A)=P(A|X<sub>1</sub>)</span><span
+lang=EN-GB style='font-size:11.0pt;line-height:115%;font-family:"Calibri",sans-serif;
+position:relative;top:5.5pt'><img width=11 height=22
+src="cogito-probability_files/image003.png"></span><span lang=EN-GB
+style='font-size:12.0pt;line-height:115%;font-family:"Times New Roman",serif'>P(X<sub>1</sub>)
++P(A|X<sub>2</sub>)</span><span
+lang=EN-GB style='font-size:11.0pt;line-height:115%;font-family:"Calibri",sans-serif;
+position:relative;top:5.5pt'><img width=11 height=22
+src="cogito-probability_files/image003.png"></span><span lang=EN-GB
+style='font-size:12.0pt;line-height:115%;font-family:"Times New Roman",serif'>P(X<sub>2</sub>)
+......</span><span
+lang=EN-GB style='font-size:11.0pt;line-height:115%;font-family:"Calibri",sans-serif;
+position:relative;top:5.5pt'><img width=145 height=22
+src="cogito-probability_files/image004.png"></span></p>
+
+<p class=MsoNormal><span lang=EN-GB style='font-size:12.0pt;line-height:115%;
+font-family:"Times New Roman",serif'>This is interesting as it removes the
+absoluteness of a probability and puts it at the mercy of the other events.
+This means that we can now probe the events on which A depends and thus we have
+a more complete view where we look at the occurrence of the causes to probe the
+likelihood of an event.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB style='font-size:12.0pt;line-height:115%;
+font-family:"Times New Roman",serif'>As we can see that our way of probing is
+becoming akin to the actual method of studying a phenomenon scientifically by
+probing the reasons and then through observing their effects.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB style='font-size:12.0pt;line-height:115%;
+font-family:"Times New Roman",serif'>Now we will take a look into the world of
+distributions.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB style='font-size:12.0pt;line-height:115%;
+font-family:"Times New Roman",serif'>So, for this let us take an example at
+first. Let us roll a dice where we are trying to find the probability that the
+sum is X, where X=2,3, 4, ...,12. This X would be what we call a random
+variable. A random variable maps an event to a real no. and the probability
+maps the R.V. to a likelihood value.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB style='font-size:12.0pt;line-height:115%;
+font-family:"Times New Roman",serif'>In the above case the R.V. is discrete,
+however for some cases the R.V. might be a continuous value or might be better
+represented by a continuous value, in these cases we have what we call a <b>probability
+density function (p.d.f). </b>A p.d.f. gives us the probability at a very
+particular value of X. Generally, the probability in such cases is aggregated
+over a range of X so we consider the integral </span><span
+lang=EN-GB style='font-size:11.0pt;line-height:115%;font-family:"Calibri",sans-serif;
+position:relative;top:4.5pt'><img width=62 height=22
+src="cogito-probability_files/image005.png"></span><span lang=EN-GB
+style='font-size:12.0pt;line-height:115%;font-family:"Times New Roman",serif'>.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB style='font-size:12.0pt;line-height:115%;
+font-family:"Times New Roman",serif'>This formulation also helps when we are
+performing a large number of experiments of discrete nature. The random
+variable albeit being discrete in nature follows the boundaries set by the
+overarching distribution.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB style='font-size:12.0pt;line-height:115%;
+font-family:"Times New Roman",serif'>This brings us to the most important ideas
+of this article. We delve into the idea of estimation of distribution of a data
+and about refinement of our knowledge(hypothesis) through Bayesian update.</span></p>
+
+<p class=MsoNormal><b><span lang=EN-GB style='font-size:12.0pt;line-height:
+115%;font-family:"Times New Roman",serif'><br>
+<br>
+<br>
+Likelihood Estimation</span></b></p>
+
+<p class=MsoNormal><span lang=EN-GB style='font-size:12.0pt;line-height:115%;
+font-family:"Times New Roman",serif'>As stated earlier every experiment with an
+outcome associated to a random variable follows an overarching p.d.f. So, when
+given a data observed in the real world, it becomes necessary to study the
+phenomenon and estimate the parameters of the distribution that we think best
+fits it.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB style='font-size:12.0pt;line-height:115%;
+font-family:"Times New Roman",serif'>Let us think of an experiment about
+tossing a coin. We need to understand the bias of the coin, i.e., the
+probability of getting a head or a tail. So let us consider the probability of
+getting a head be p.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB style='font-size:12.0pt;line-height:115%;
+font-family:"Times New Roman",serif'>Thus, the likelihood function will be</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+lang=EN-GB style='font-size:11.0pt;line-height:115%;font-family:"Calibri",sans-serif;
+position:relative;top:5.5pt'><img width=80 height=22
+src="cogito-probability_files/image006.png"></span><span lang=EN-GB
+style='font-size:12.0pt;line-height:115%;font-family:"Times New Roman",serif'> </span><span
+lang=EN-GB style='font-size:11.0pt;line-height:115%;font-family:"Calibri",sans-serif;
+position:relative;top:5.5pt'><img width=86 height=23
+src="cogito-probability_files/image007.png"></span></p>
+
+<p class=MsoNormal><span lang=EN-GB style='font-size:12.0pt;line-height:115%;
+font-family:"Times New Roman",serif'>With x<sub>i</sub> being the value 0 or 1
+depending on outcome of i th toss</span></p>
+
+<p class=MsoNormal><span lang=EN-GB style='font-size:12.0pt;line-height:115%;
+font-family:"Times New Roman",serif'>Taking log</span></p>
+
+<p class=MsoNormal><span
+lang=EN-GB style='font-size:11.0pt;line-height:115%;font-family:"Calibri",sans-serif'><img
+width=291 height=36 src="cogito-probability_files/image008.png"></span></p>
+
+<p class=MsoNormal><span lang=EN-GB style='font-size:12.0pt;line-height:115%;
+font-family:"Times New Roman",serif'>Setting the derivative of </span><span
+lang=EN-GB style='font-size:11.0pt;line-height:115%;font-family:"Calibri",sans-serif;
+position:relative;top:5.5pt'><img width=6 height=22
+src="cogito-probability_files/image009.png"></span><span lang=EN-GB
+style='font-size:12.0pt;line-height:115%;font-family:"Times New Roman",serif'> with
+respect to p to 0 we get the form</span></p>
+
+<p class=MsoNormal><span
+lang=EN-GB style='font-size:11.0pt;line-height:115%;font-family:"Calibri",sans-serif'><img
+width=79 height=39 src="cogito-probability_files/image010.png"></span></p>
+
+<p class=MsoNormal><span lang=EN-GB style='font-size:12.0pt;line-height:115%;
+font-family:"Times New Roman",serif'>Thus, we can see that we can get the
+boundary by performing the experiment </span><span
+lang=EN-GB style='font-size:11.0pt;line-height:115%;font-family:"Calibri",sans-serif;
+position:relative;top:5.5pt'><img width=9 height=22
+src="cogito-probability_files/image011.png"></span><span lang=EN-GB
+style='font-size:12.0pt;line-height:115%;font-family:"Times New Roman",serif'> number
+of times and averaging out the result, this gives the idea of the pdf given
+that we know the data, i.e., it maximizes the likelihood of the given data
+under an expected distribution by fine tuning the variable parameters of the
+distribution.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB style='font-size:12.0pt;line-height:115%;
+font-family:"Times New Roman",serif'>Finally comes the Bayes’ theorem and the
+idea of Bayesian update.</span></p>
+
+<p class=MsoNormal><b><span lang=EN-GB style='font-size:12.0pt;line-height:
+115%;font-family:"Times New Roman",serif'>Bayes’ Theorem</span></b></p>
+
+<p class=MsoNormal><span lang=EN-GB style='font-size:12.0pt;line-height:115%;
+font-family:"Times New Roman",serif'>Let’s talk about Bayes’ theorem in a more
+quantitative sense at first.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB style='font-size:12.0pt;line-height:115%;
+font-family:"Times New Roman",serif'>The theorem says:</span></p>
+
+<p class=MsoNormal><span
+lang=EN-GB style='font-size:11.0pt;line-height:115%;font-family:"Calibri",sans-serif'><img
+width=154 height=43 src="cogito-probability_files/image012.png"></span></p>
+
+<p class=MsoNormal><span lang=EN-GB style='font-size:12.0pt;line-height:115%;
+font-family:"Times New Roman",serif'>This can easily be verified from our
+previous description of conditional probability and isn’t of much interest
+here. However what interests us more is the way it talks of improving the quality
+of a hypothesis given a dataset.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB style='font-size:12.0pt;line-height:115%;
+font-family:"Times New Roman",serif'>Let’s say we have a set of hypotheses
+called H, with elements h<sub>1</sub>, h<sub>2</sub>, h<sub>3</sub>....</span></p>
+
+<p class=MsoNormal><span lang=EN-GB style='font-size:12.0pt;line-height:115%;
+font-family:"Times New Roman",serif'>Now we are given a dataset D.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB style='font-size:12.0pt;line-height:115%;
+font-family:"Times New Roman",serif'>So we have the Bayes’ theorem taking the
+form:</span></p>
+
+<p class=MsoNormal><span
+lang=EN-GB style='font-size:11.0pt;line-height:115%;font-family:"Calibri",sans-serif'><img
+width=167 height=43 src="cogito-probability_files/image013.png"></span></p>
+
+<p class=MsoNormal><span lang=EN-GB style='font-size:12.0pt;line-height:115%;
+font-family:"Times New Roman",serif'>In this case as we can see we are trying
+to consider the probability of the possible hypotheses to find the actual
+underlying possible hypotheses from the set. </span></p>
+
+<p class=MsoNormal><span lang=EN-GB style='font-size:12.0pt;line-height:115%;
+font-family:"Times New Roman",serif'>Now in this case we can see that we are
+seeing the hypotheses in the context of the data D. The P(D|h<sub>i</sub>)
+gives us the likelihood of the data under the assumption of the hypothesis h<sub>i</sub>
+and the P(h<sub>i</sub>) gives us the prior probability, a probabilistic weight
+to the hypothesis assigning it a higher or lower importance. </span></p>
+
+<p class=MsoNormal><span lang=EN-GB style='font-size:12.0pt;line-height:115%;
+font-family:"Times New Roman",serif'>The severe con of this system however lies
+in this prior probability as this perceived importance has no mathematical
+basis and is often reliant on previously observed frequency or on domain
+experts and thus might actually be very wrong. </span></p>
+
+<p class=MsoNormal><span lang=EN-GB style='font-size:12.0pt;line-height:115%;
+font-family:"Times New Roman",serif'>There also exists another aspect of the
+formulation, it shows that in the context of data if we consider uniform prior
+probability for all the hypotheses, then the likelihood function is what
+determines the posteriori (resultant) probability.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB style='font-size:12.0pt;line-height:115%;
+font-family:"Times New Roman",serif'>Also, we can form an idea of updating our
+knowledge with an update in data.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB style='font-size:12.0pt;line-height:115%;
+font-family:"Times New Roman",serif'>Let’s say we have an update in data and
+have found a new dataset D’.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB style='font-size:12.0pt;line-height:115%;
+font-family:"Times New Roman",serif'>Thus, finding the importance of the
+hypothesis from the new dataset becomes</span></p>
+
+<p class=MsoNormal><span
+lang=EN-GB style='font-size:11.0pt;line-height:115%;font-family:"Calibri",sans-serif'><img
+width=193 height=43 src="cogito-probability_files/image014.png"></span></p>
+
+<p class=MsoNormal><span lang=EN-GB style='font-size:12.0pt;line-height:115%;
+font-family:"Times New Roman",serif'>This as we can see now replaces the weight
+of the hypothesis with a weight that we have previously observed in context of
+another dataset that might justify this dataset or observation to some extent.</span></p>
+
+<p class=MsoNormal><b><span lang=EN-GB style='font-size:12.0pt;line-height:
+115%;font-family:"Times New Roman",serif'>Conclusions</span></b></p>
+
+<p class=MsoNormal><span lang=EN-GB style='font-size:12.0pt;line-height:115%;
+font-family:"Times New Roman",serif'>Thus, we can see the several forms and
+ways of how probability acts as a means of studying and understanding
+statistically the relation between data/observations and honing our hypotheses
+from the received observation to finally resolve the best possible hypotheses.</span></p>
+
+</div>
+
+</body>
+
+</html>
